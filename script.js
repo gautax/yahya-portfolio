@@ -1,4 +1,5 @@
 const revealItems = document.querySelectorAll(".reveal");
+const neuralCanvas = document.querySelector(".neural-bg");
 const glow = document.querySelector(".cursor-glow");
 const menuToggle = document.querySelector(".menu-toggle");
 const themeToggle = document.querySelector(".theme-toggle");
@@ -16,6 +17,118 @@ const setTheme = (theme) => {
 };
 
 setTheme(localStorage.getItem("theme") || "dark");
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+const startNeuralBackground = () => {
+  if (!neuralCanvas || prefersReducedMotion.matches) return;
+
+  const ctx = neuralCanvas.getContext("2d");
+  const nodes = [];
+  const pointer = { x: -9999, y: -9999 };
+  let width = 0;
+  let height = 0;
+  let animationFrame;
+
+  const resize = () => {
+    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+    width = window.innerWidth;
+    height = window.innerHeight;
+    neuralCanvas.width = Math.floor(width * ratio);
+    neuralCanvas.height = Math.floor(height * ratio);
+    neuralCanvas.style.width = `${width}px`;
+    neuralCanvas.style.height = `${height}px`;
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+    nodes.length = 0;
+    const count = Math.min(78, Math.max(34, Math.floor((width * height) / 22000)));
+    for (let i = 0; i < count; i += 1) {
+      nodes.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.28,
+        vy: (Math.random() - 0.5) * 0.28,
+        radius: Math.random() * 1.7 + 1.1
+      });
+    }
+  };
+
+  const draw = () => {
+    ctx.clearRect(0, 0, width, height);
+    const ink = getComputedStyle(root).getPropertyValue("--node").trim() || "rgba(155, 214, 231, 0.35)";
+    const lineDistance = width < 720 ? 110 : 150;
+
+    nodes.forEach((node) => {
+      node.x += node.vx;
+      node.y += node.vy;
+
+      if (node.x < -20) node.x = width + 20;
+      if (node.x > width + 20) node.x = -20;
+      if (node.y < -20) node.y = height + 20;
+      if (node.y > height + 20) node.y = -20;
+
+      const dx = pointer.x - node.x;
+      const dy = pointer.y - node.y;
+      const distance = Math.hypot(dx, dy);
+      if (distance < 150) {
+        node.x -= dx * 0.0014;
+        node.y -= dy * 0.0014;
+      }
+    });
+
+    for (let i = 0; i < nodes.length; i += 1) {
+      for (let j = i + 1; j < nodes.length; j += 1) {
+        const first = nodes[i];
+        const second = nodes[j];
+        const distance = Math.hypot(first.x - second.x, first.y - second.y);
+        if (distance < lineDistance) {
+          ctx.globalAlpha = (1 - distance / lineDistance) * 0.42;
+          ctx.strokeStyle = ink;
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(first.x, first.y);
+          ctx.lineTo(second.x, second.y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    nodes.forEach((node) => {
+      ctx.globalAlpha = 0.78;
+      ctx.fillStyle = ink;
+      ctx.beginPath();
+      ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    ctx.globalAlpha = 1;
+    animationFrame = window.requestAnimationFrame(draw);
+  };
+
+  window.addEventListener("resize", resize);
+  window.addEventListener("pointermove", (event) => {
+    pointer.x = event.clientX;
+    pointer.y = event.clientY;
+  });
+  window.addEventListener("pointerleave", () => {
+    pointer.x = -9999;
+    pointer.y = -9999;
+  });
+
+  resize();
+  draw();
+
+  prefersReducedMotion.addEventListener("change", () => {
+    window.cancelAnimationFrame(animationFrame);
+    ctx.clearRect(0, 0, width, height);
+    if (!prefersReducedMotion.matches) {
+      resize();
+      draw();
+    }
+  });
+};
+
+startNeuralBackground();
 
 const observer = new IntersectionObserver(
   (entries) => {

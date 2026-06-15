@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <canvas class="neural-bg" aria-hidden="true"></canvas>
     <div class="cursor-glow" aria-hidden="true"></div>
 
     <header class="site-header">
@@ -37,6 +38,7 @@
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#expertise">Expertise</a>
         <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#experience">Journey</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -61,10 +63,30 @@
             </a>
           </div>
           <div class="social-row" aria-label="Professional links">
-            <a href="https://github.com/gautax" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/yahya-menkari" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://medium.com/@yahya.menkari" target="_blank" rel="noreferrer">Medium</a>
-            <a href="mailto:prodigy.hello@gmail.com">Email</a>
+            <a href="https://github.com/gautax" target="_blank" rel="noreferrer" aria-label="GitHub profile">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.58 2 12.24c0 4.5 2.87 8.32 6.84 9.68.5.1.68-.22.68-.49v-1.86c-2.78.62-3.37-1.22-3.37-1.22-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.85.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05A9.3 9.3 0 0 1 12 6.92c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.95.68 1.92v2.76c0 .27.18.59.69.49A10.1 10.1 0 0 0 22 12.24C22 6.58 17.52 2 12 2Z" />
+              </svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/yahya-menkari" target="_blank" rel="noreferrer" aria-label="LinkedIn profile">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.94 8.96H3.72V20h3.22V8.96ZM5.33 4a1.86 1.86 0 1 0 0 3.72A1.86 1.86 0 0 0 5.33 4Zm15 9.71c0-3.02-1.61-4.42-3.76-4.42-1.73 0-2.51.95-2.94 1.62V8.96h-3.09V20h3.22v-5.46c0-1.44.27-2.84 2.06-2.84 1.77 0 1.79 1.65 1.79 2.93V20h3.22v-6.29Z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://medium.com/@yahya.menkari" target="_blank" rel="noreferrer" aria-label="Medium profile">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13.33 12c0 3.31-2.52 6-5.63 6s-5.63-2.69-5.63-6 2.52-6 5.63-6 5.63 2.69 5.63 6Zm6.18 0c0 3.11-1.26 5.63-2.81 5.63S13.88 15.11 13.88 12 15.14 6.37 16.7 6.37 19.51 8.89 19.51 12Zm2.52 0c0 2.78-.44 5.03-.98 5.03s-.98-2.25-.98-5.03.44-5.03.98-5.03.98 2.25.98 5.03Z" />
+              </svg>
+              <span>Medium</span>
+            </a>
+            <a href="mailto:prodigy.hello@gmail.com" aria-label="Send email">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4.5 5.5h15A2.5 2.5 0 0 1 22 8v8a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 16V8a2.5 2.5 0 0 1 2.5-2.5Zm0 2 7.5 5.1 7.5-5.1h-15Zm15 9V9.91l-6.94 4.72a1 1 0 0 1-1.12 0L4.5 9.91v6.59h15Z" />
+              </svg>
+              <span>Email</span>
+            </a>
           </div>
         </div>
 
@@ -137,6 +159,9 @@
             <div class="project-links">
               <a href="https://medium.com/@yahya.menkari/from-raw-weather-station-data-to-24-hour-forecasts-building-an-end-to-end-ai-forecasting-system-c73472605fa1" target="_blank" rel="noreferrer">
                 Read article
+              </a>
+              <a href="https://github.com/gautax/Weather-Forcasting-Using-ML" target="_blank" rel="noreferrer">
+                View code
               </a>
             </div>
           </article>
@@ -230,19 +255,69 @@
         </div>
       </section>
 
-      <section class="section skill-strip" aria-label="Technical skills">
-        <span>Python</span>
-        <span>Java</span>
-        <span>SQL</span>
-        <span>Scikit-Learn</span>
-        <span>XGBoost</span>
-        <span>Gemini</span>
-        <span>CrewAI</span>
-        <span>Neo4j</span>
-        <span>Qdrant</span>
-        <span>FAISS</span>
-        <span>Docker</span>
-        <span>Google Cloud</span>
+      <section id="skills" class="section skills-showcase" aria-label="Technical skills">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Technical toolkit</p>
+          <h2>Skills I use to build AI systems from data to deployment.</h2>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-group reveal">
+            <h3>AI, LLM & Retrieval</h3>
+            <div class="skill-tags">
+              <span>RAG</span>
+              <span>Agentic AI</span>
+              <span>Gemini</span>
+              <span>CrewAI</span>
+              <span>Hugging Face</span>
+              <span>Semantic Search</span>
+              <span>Knowledge Graphs</span>
+              <span>Text-to-Cypher</span>
+            </div>
+          </article>
+          <article class="skill-group reveal">
+            <h3>Machine Learning & Forecasting</h3>
+            <div class="skill-tags">
+              <span>Scikit-Learn</span>
+              <span>XGBoost</span>
+              <span>ARIMA</span>
+              <span>SARIMA</span>
+              <span>LSTM</span>
+              <span>GRU</span>
+              <span>TCN</span>
+              <span>MAE/RMSE</span>
+            </div>
+          </article>
+          <article class="skill-group reveal">
+            <h3>Data, Databases & Cloud</h3>
+            <div class="skill-tags">
+              <span>Python</span>
+              <span>SQL</span>
+              <span>Neo4j</span>
+              <span>Qdrant</span>
+              <span>FAISS</span>
+              <span>MongoDB</span>
+              <span>Firestore</span>
+              <span>Google Cloud</span>
+              <span>Docker</span>
+              <span>Power BI</span>
+            </div>
+          </article>
+          <article class="skill-group reveal">
+            <h3>Product Engineering</h3>
+            <div class="skill-tags">
+              <span>Streamlit</span>
+              <span>Flask</span>
+              <span>Java</span>
+              <span>C</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>OCR</span>
+              <span>API Integration</span>
+              <span>DOCX Reports</span>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section id="contact" class="contact section-band">
