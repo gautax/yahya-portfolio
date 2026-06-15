@@ -38,6 +38,7 @@
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#expertise">Expertise</a>
         <a href="#projects">Projects</a>
+        <a href="#systems-map">Systems Map</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Journey</a>
         <a href="#contact">Contact</a>
@@ -146,7 +147,7 @@
           <h2>Projects across healthcare AI, cloud deployment, RAG and forecasting.</h2>
         </div>
         <div class="projects-grid">
-          <article class="project-card featured-project reveal">
+          <article class="project-card featured-project reveal" data-project-card="weather">
             <div>
               <p class="project-type">Weather AI - Forecasting - End-to-end ML</p>
               <h3>24-Hour Weather Forecasting System</h3>
@@ -165,7 +166,7 @@
               </a>
             </div>
           </article>
-          <article class="project-card reveal">
+          <article class="project-card reveal" data-project-card="agents">
             <div>
               <p class="project-type">AI Agents - Streamlit - Gemini</p>
               <h3>Medical AI App with Agents</h3>
@@ -178,7 +179,7 @@
               <a href="https://github.com/gautax/medical-ai-app-with-agents" target="_blank" rel="noreferrer">View project</a>
             </div>
           </article>
-          <article class="project-card reveal">
+          <article class="project-card reveal" data-project-card="symptom">
             <div>
               <p class="project-type">Neo4j - Qdrant - PubMed - Gemini</p>
               <h3>AI-Powered Symptom Checker</h3>
@@ -191,7 +192,7 @@
               <a href="https://github.com/gautax/AI-Powered-Symptom-Checker" target="_blank" rel="noreferrer">View project</a>
             </div>
           </article>
-          <article class="project-card reveal">
+          <article class="project-card reveal" data-project-card="prescription">
             <div>
               <p class="project-type">Google Cloud Vision - Firestore - Docker</p>
               <h3>Prescription Reader AI</h3>
@@ -204,7 +205,7 @@
               <a href="https://github.com/gautax/cloud-deployment-app" target="_blank" rel="noreferrer">View project</a>
             </div>
           </article>
-          <article class="project-card reveal">
+          <article class="project-card reveal" data-project-card="rag">
             <div>
               <p class="project-type">RAG - Jupyter Notebook</p>
               <h3>Agentic RAG</h3>
@@ -217,6 +218,105 @@
               <a href="https://github.com/gautax/Agentic_RAG" target="_blank" rel="noreferrer">View project</a>
             </div>
           </article>
+        </div>
+      </section>
+
+      <section id="systems-map" class="section systems-map section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Interactive systems map</p>
+          <h2>Explore how my projects connect skills, data and deployed AI products.</h2>
+        </div>
+        <div class="map-shell reveal" aria-label="Interactive graph of Yahya Menkari projects and skills">
+          <svg class="map-lines" viewBox="0 0 1000 620" aria-hidden="true">
+            <path data-link="rag-symptom" d="M500 280 C420 235 350 210 245 170" />
+            <path data-link="rag-rag" d="M500 400 C420 430 320 470 220 455" />
+            <path data-link="graph-symptom" d="M500 280 C575 210 675 155 790 145" />
+            <path data-link="vector-symptom" d="M500 280 C610 250 705 245 840 295" />
+            <path data-link="gemini-agents" d="M500 205 C400 135 325 92 190 94" />
+            <path data-link="gemini-symptom" d="M500 280 C410 205 305 150 190 94" />
+            <path data-link="crewai-agents" d="M500 205 C575 130 670 88 810 95" />
+            <path data-link="forecasting-weather" d="M500 120 C435 100 355 94 240 120" />
+            <path data-link="xgboost-weather" d="M500 120 C570 104 665 102 780 120" />
+            <path data-link="cloud-prescription" d="M500 500 C410 528 330 546 205 535" />
+            <path data-link="ocr-prescription" d="M500 500 C585 535 685 548 815 530" />
+            <path data-link="streamlit-agents" d="M500 205 C500 155 500 105 500 72" />
+            <path data-link="streamlit-prescription" d="M500 500 C500 435 500 355 500 205" />
+            <path data-link="flask-symptom" d="M500 280 C500 215 500 150 500 72" />
+            <path data-link="docker-prescription" d="M500 500 C585 440 665 390 820 385" />
+            <path data-link="python-weather" d="M500 120 C500 180 500 230 500 280" />
+            <path data-link="python-agents" d="M500 205 C500 230 500 250 500 280" />
+            <path data-link="python-prescription" d="M500 500 C500 425 500 350 500 280" />
+          </svg>
+
+          <button class="map-node project-node" style="--x: 50%; --y: 18%;" data-node="weather" data-type="project" type="button">
+            <span>Project</span>
+            <strong>Weather Forecasting</strong>
+          </button>
+          <button class="map-node project-node" style="--x: 50%; --y: 32%;" data-node="agents" data-type="project" type="button">
+            <span>Project</span>
+            <strong>Medical Agents</strong>
+          </button>
+          <button class="map-node project-node" style="--x: 50%; --y: 45%;" data-node="symptom" data-type="project" type="button">
+            <span>Project</span>
+            <strong>Symptom Checker</strong>
+          </button>
+          <button class="map-node project-node" style="--x: 50%; --y: 64%;" data-node="rag" data-type="project" type="button">
+            <span>Project</span>
+            <strong>Agentic RAG</strong>
+          </button>
+          <button class="map-node project-node" style="--x: 50%; --y: 80%;" data-node="prescription" data-type="project" type="button">
+            <span>Project</span>
+            <strong>Prescription Reader</strong>
+          </button>
+
+          <button class="map-node skill-node" style="--x: 24%; --y: 19%;" data-node="forecasting" type="button">
+            Forecasting
+          </button>
+          <button class="map-node skill-node" style="--x: 78%; --y: 19%;" data-node="xgboost" type="button">
+            XGBoost
+          </button>
+          <button class="map-node skill-node" style="--x: 14%; --y: 9%;" data-node="gemini" type="button">
+            Gemini
+          </button>
+          <button class="map-node skill-node" style="--x: 86%; --y: 9%;" data-node="crewai" type="button">
+            CrewAI
+          </button>
+          <button class="map-node skill-node" style="--x: 43%; --y: 9%;" data-node="streamlit" type="button">
+            Streamlit
+          </button>
+          <button class="map-node skill-node" style="--x: 57%; --y: 9%;" data-node="flask" type="button">
+            Flask
+          </button>
+          <button class="map-node skill-node" style="--x: 24%; --y: 27%;" data-node="rag-skill" type="button">
+            RAG
+          </button>
+          <button class="map-node skill-node" style="--x: 85%; --y: 31%;" data-node="graph" type="button">
+            Neo4j Graph
+          </button>
+          <button class="map-node skill-node" style="--x: 84%; --y: 47%;" data-node="vector" type="button">
+            Qdrant Vector Search
+          </button>
+          <button class="map-node skill-node" style="--x: 22%; --y: 73%;" data-node="cloud" type="button">
+            Google Cloud
+          </button>
+          <button class="map-node skill-node" style="--x: 82%; --y: 86%;" data-node="ocr" type="button">
+            OCR
+          </button>
+          <button class="map-node skill-node" style="--x: 82%; --y: 62%;" data-node="docker" type="button">
+            Docker
+          </button>
+          <button class="map-node core-node" style="--x: 31%; --y: 55%;" data-node="python" type="button">
+            Python Core
+          </button>
+
+          <aside class="map-insight" aria-live="polite">
+            <span class="map-insight-label">Start here</span>
+            <h3>Hover a skill or project</h3>
+            <p>
+              The graph will light up the systems where that capability appears, from
+              forecasting pipelines to medical RAG and cloud-deployed OCR.
+            </p>
+          </aside>
         </div>
       </section>
 
