@@ -1,452 +1,115 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfolio of Yahya Menkari, Big Data and Artificial Intelligence Engineering student."
-    />
-    <title>Yahya Menkari | Big Data & AI Engineer</title>
+    <meta name="description" content="Yahya Menkari, AI & Machine Learning Engineer. Explore projects in workflow automation, RAG, forecasting and cloud AI." />
+    <meta name="theme-color" content="#f7f9f8" />
+    <title>Yahya Menkari | AI & Machine Learning Engineer</title>
+    <script>try { document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"; } catch {}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:ital,wght@1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20261029-upwork" />
+    <script src="script.js?v=20261029-refined" defer></script>
   </head>
   <body>
-    <canvas class="neural-bg" aria-hidden="true"></canvas>
-    <div class="cursor-glow" aria-hidden="true"></div>
-
-    <header class="site-header">
-      <a class="brand" href="#home" aria-label="Back to home">
-        <span>YM</span>
-        <strong>Yahya Menkari</strong>
-      </a>
+    <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10" /></symbol>
+      <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14m-6-6 6 6 6-6" /></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" /></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42m0-14.14-1.42 1.42m-11.3 11.3-1.42 1.42" /></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.9 13.2A9 9 0 0 1 10.8 3.1a9 9 0 1 0 10.1 10.1Z" /></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" /></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z" /></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6" /></symbol>
+      <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.3-4.3-2.2-6-2.7m12 5v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.8A5.3 5.3 0 0 0 19 4.4a4.9 4.9 0 0 0-.1-3.6s-1.2-.4-3.9 1.4a13.4 13.4 0 0 0-7 0C5.3.4 4.1.8 4.1.8A4.9 4.9 0 0 0 4 4.4a5.3 5.3 0 0 0-1.4 3.7c0 5.3 3.2 6.5 6.2 6.8A3.4 3.4 0 0 0 8 17.5v3.8" transform="translate(1 1) scale(.91)" /></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M7 10v7m0-10v.01M11 17v-7m0 3a3 3 0 0 1 6 0v4" /></symbol>
+      <symbol id="i-medium" viewBox="0 0 24 24"><ellipse cx="7" cy="12" rx="5" ry="6" /><ellipse cx="16" cy="12" rx="2.5" ry="6" /><path d="M22 7v10" /></symbol>
+    </defs></svg>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header"><div class="header-inner container">
+      <a class="brand" href="#home" aria-label="Yahya Menkari, home"><span class="monogram">ym<span>.</span></span><span class="brand-name">Yahya Menkari</span></a>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation"><a href="#projects">Selected work</a><a href="#expertise">Expertise</a><a href="#about">About</a></nav>
       <div class="header-actions">
-        <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
-          <span class="theme-icon" aria-hidden="true"></span>
-          <span class="theme-label">Dark</span>
-        </button>
-        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-        </button>
+        <button class="icon-button theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch theme"><svg class="icon moon-icon" aria-hidden="true"><use href="#i-moon" /></svg><svg class="icon sun-icon" aria-hidden="true"><use href="#i-sun" /></svg></button>
+        <a class="header-contact" href="#contact">Let's talk <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+        <button class="icon-button menu-toggle" type="button" aria-label="Open menu" aria-controls="main-nav" aria-expanded="false"><span></span><span></span></button>
       </div>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#expertise">Expertise</a>
-        <a href="#projects">Projects</a>
-        <a href="#systems-map">Systems Map</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Journey</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section id="home" class="hero section-band">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Big Data & Artificial Intelligence Engineering</p>
-          <h1>I build useful, reliable AI systems with a product mindset.</h1>
-          <p class="hero-text">
-            Big Data & Artificial Intelligence Engineer with hands-on experience on Machine Learning, RAG architectures,
-            graph databases and cloud-based AI systems. I turn complex data into practical
-            applications that can be tested, deployed and improved.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="mailto:yahya.menkari.ai@gmail.com?subject=Opportunity%20for%20Yahya%20Menkari">
-              Propose an opportunity
-            </a>
-            <a class="button secondary" href="assets/YahyaMenkari-CV-2026.pdf" target="_blank" rel="noreferrer">
-              View resume
-            </a>
+    </div></header>
+    <main id="main">
+      <section id="home" class="hero">
+        <canvas id="hero-network" aria-hidden="true"></canvas>
+        <div class="hero-inner container">
+          <div class="hero-topline"><div class="identity"><span class="avatar"><img src="assets/profile-pic.png" alt="Illustrated portrait of Yahya Menkari" width="80" height="80" /></span><span>AI & Machine Learning Engineer</span></div><span class="availability"><span></span> Open to opportunities</span></div>
+          <h1>Yahya <em>Menkari.</em></h1>
+          <div class="hero-bottom">
+            <div class="hero-intro"><h2>Complex data.<br />Useful, reliable systems.</h2><p>I build AI applications that connect models, knowledge and workflows. From the first dataset to something people can use.</p></div>
+            <div class="hero-connect">
+              <div class="hero-actions">
+                <a class="button button-primary" href="#projects">Explore my work <svg class="icon" aria-hidden="true"><use href="#i-down" /></svg></a>
+                <details class="resume-menu"><summary class="button button-secondary"><svg class="icon" aria-hidden="true"><use href="#i-download" /></svg> Resume</summary><div class="resume-options"><a href="assets/YahyaMenkari-CV-2026-ATS.pdf" target="_blank" rel="noreferrer">ATS version <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a><a href="assets/YahyaMenkari-CV-2026.pdf" target="_blank" rel="noreferrer">Visual version <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a></div></details>
+              </div>
+              <div class="social-links" aria-label="Professional profiles">
+                <a href="https://github.com/gautax" target="_blank" rel="noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg> GitHub</a>
+                <a href="https://www.linkedin.com/in/yahya-menkari" target="_blank" rel="noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-linkedin" /></svg> LinkedIn</a>
+                <a href="https://medium.com/@yahya.menkari" target="_blank" rel="noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-medium" /></svg> Medium</a>
+                <a href="https://www.upwork.com/freelancers/~019dca64c63e7993a5?mp_source=share" target="_blank" rel="noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg> Upwork</a>
+              </div>
+            </div>
           </div>
-          <div class="social-row" aria-label="Professional links">
-            <a href="https://github.com/gautax" target="_blank" rel="noreferrer" aria-label="GitHub profile">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 2C6.48 2 2 6.58 2 12.24c0 4.5 2.87 8.32 6.84 9.68.5.1.68-.22.68-.49v-1.86c-2.78.62-3.37-1.22-3.37-1.22-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.85.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05A9.3 9.3 0 0 1 12 6.92c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.95.68 1.92v2.76c0 .27.18.59.69.49A10.1 10.1 0 0 0 22 12.24C22 6.58 17.52 2 12 2Z" />
-              </svg>
-              <span>GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/yahya-menkari" target="_blank" rel="noreferrer" aria-label="LinkedIn profile">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M6.94 8.96H3.72V20h3.22V8.96ZM5.33 4a1.86 1.86 0 1 0 0 3.72A1.86 1.86 0 0 0 5.33 4Zm15 9.71c0-3.02-1.61-4.42-3.76-4.42-1.73 0-2.51.95-2.94 1.62V8.96h-3.09V20h3.22v-5.46c0-1.44.27-2.84 2.06-2.84 1.77 0 1.79 1.65 1.79 2.93V20h3.22v-6.29Z" />
-              </svg>
-              <span>LinkedIn</span>
-            </a>
-            <a href="https://medium.com/@yahya.menkari" target="_blank" rel="noreferrer" aria-label="Medium profile">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M13.33 12c0 3.31-2.52 6-5.63 6s-5.63-2.69-5.63-6 2.52-6 5.63-6 5.63 2.69 5.63 6Zm6.18 0c0 3.11-1.26 5.63-2.81 5.63S13.88 15.11 13.88 12 15.14 6.37 16.7 6.37 19.51 8.89 19.51 12Zm2.52 0c0 2.78-.44 5.03-.98 5.03s-.98-2.25-.98-5.03.44-5.03.98-5.03.98 2.25.98 5.03Z" />
-              </svg>
-              <span>Medium</span>
-            </a>
-            <a href="mailto:yahya.menkari.ai@gmail.com" aria-label="Send email">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4.5 5.5h15A2.5 2.5 0 0 1 22 8v8a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 16V8a2.5 2.5 0 0 1 2.5-2.5Zm0 2 7.5 5.1 7.5-5.1h-15Zm15 9V9.91l-6.94 4.72a1 1 0 0 1-1.12 0L4.5 9.91v6.59h15Z" />
-              </svg>
-              <span>Email</span>
-            </a>
-          </div>
+          <div class="hero-footnote"><div class="hero-proof-links"><a href="#projects" data-project-link="outreach"><strong>12</strong><span>connected workflows</span></a><a href="#projects" data-project-link="weather"><strong>43k+</strong><span>weather observations</span></a></div><a href="#projects" class="work-anchor"><span>Explore the systems</span><svg class="icon" aria-hidden="true"><use href="#i-down" /></svg></a></div>
         </div>
-
-        <div class="hero-visual reveal">
-          <div class="portrait-shell">
-            <img src="assets/profile-pic.png" alt="Portrait of Yahya Menkari" />
-            <div class="orbit one"></div>
-            <div class="orbit two"></div>
+      </section>
+      <section id="projects" class="section work-section container">
+        <div class="section-heading"><div><p class="eyebrow"><span>01</span> Selected work</p><h2>Real problems. <em>Working systems.</em></h2></div><p>The tools, decisions and evidence<br />behind six applied AI projects.</p></div>
+        <div class="work-toolbar"><span class="work-count"><span id="project-count">06</span> projects</span><div class="filters" role="group" aria-label="Filter projects"><button type="button" data-filter="all" aria-pressed="true">All work</button><button type="button" data-filter="automation" aria-pressed="false">Automation</button><button type="button" data-filter="ml" aria-pressed="false">ML</button><button type="button" data-filter="genai" aria-pressed="false">GenAI</button><button type="button" data-filter="cloud" aria-pressed="false">Cloud</button></div></div>
+        <div class="project-explorer">
+          <div class="mobile-project-picker"><label for="project-picker">Project <span id="project-position">01 / 06</span></label><select id="project-picker" aria-controls="project-panel"><option value="outreach">AI Job Discovery & Outreach</option><option value="weather">24-Hour Weather Forecasting</option><option value="symptom">AI-Powered Symptom Checker</option><option value="agents">Medical AI Assistant with Agents</option><option value="prescription">Prescription Reader AI</option><option value="rag">Agentic RAG Exploration</option></select></div>
+          <div class="project-tabs" role="tablist" aria-label="Projects" aria-orientation="vertical">
+            <button type="button" role="tab" id="tab-outreach" aria-controls="project-panel" aria-selected="true" data-project="outreach"><span class="tab-number">01</span><span><strong>Job Outreach</strong><small>AI workflow automation</small></span><svg class="icon" aria-hidden="true"><use href="#i-chevron" /></svg></button>
+            <button type="button" role="tab" id="tab-weather" aria-controls="project-panel" aria-selected="false" tabindex="-1" data-project="weather"><span class="tab-number">02</span><span><strong>Weather Forecasting</strong><small>Time-series research</small></span><svg class="icon" aria-hidden="true"><use href="#i-chevron" /></svg></button>
+            <button type="button" role="tab" id="tab-symptom" aria-controls="project-panel" aria-selected="false" tabindex="-1" data-project="symptom"><span class="tab-number">03</span><span><strong>Symptom Checker</strong><small>Graph & vector retrieval</small></span><svg class="icon" aria-hidden="true"><use href="#i-chevron" /></svg></button>
+            <button type="button" role="tab" id="tab-agents" aria-controls="project-panel" aria-selected="false" tabindex="-1" data-project="agents"><span class="tab-number">04</span><span><strong>Medical Agents</strong><small>Multi-agent application</small></span><svg class="icon" aria-hidden="true"><use href="#i-chevron" /></svg></button>
+            <button type="button" role="tab" id="tab-prescription" aria-controls="project-panel" aria-selected="false" tabindex="-1" data-project="prescription"><span class="tab-number">05</span><span><strong>Prescription Reader</strong><small>Cloud OCR application</small></span><svg class="icon" aria-hidden="true"><use href="#i-chevron" /></svg></button>
+            <button type="button" role="tab" id="tab-rag" aria-controls="project-panel" aria-selected="false" tabindex="-1" data-project="rag"><span class="tab-number">06</span><span><strong>Agentic RAG</strong><small>Retrieval exploration</small></span><svg class="icon" aria-hidden="true"><use href="#i-chevron" /></svg></button>
           </div>
-          <div class="signal-card model-card">
-            <span>model stack</span>
-            <strong>RAG + Graph + Vector Search</strong>
-          </div>
-          <div class="signal-card metric-card">
-            <span>focus</span>
-            <strong>AI systems built for impact</strong>
+          <article id="project-panel" class="project-panel" role="tabpanel" aria-labelledby="tab-outreach" tabindex="0">
+            <div class="project-overview"><div class="project-summary"><p id="project-category" class="eyebrow project-category">Workflow automation / Recent project</p><h3 id="project-title">AI Job Discovery & Outreach Platform</h3><p id="project-description" class="project-description">A coordinated system for company discovery, contact research and evidence-grounded outreach, with a human in control of every send.</p><dl id="project-evidence" class="project-evidence"><div><dt>n8n workflows</dt><dd>12</dd></div><div><dt>dashboard views</dt><dd>5</dd></div></dl></div><figure class="project-visual"><div class="preview-heading"><span id="preview-kind">Repository screenshot</span><button type="button" class="preview-expand" aria-label="Expand project preview" title="Expand preview"><svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></button></div><div id="project-preview" class="preview-content"><img src="assets/outreach-company-qualification.png" alt="Company qualification workflow in n8n" width="1309" height="466" loading="lazy" /></div><figcaption id="preview-caption">Company qualification / n8n workflow</figcaption></figure></div>
+            <ol id="project-flow" class="project-flow" aria-label="System architecture"><li><span>01</span>Discover</li><li><span>02</span>Qualify</li><li><span>03</span>Research</li><li><span>04</span>Review & send</li></ol>
+            <div class="stack-heading"><h4>Inside the stack</h4><span id="stack-count">8 technologies</span></div>
+            <div id="project-stack" class="project-stack" role="group" aria-label="Project technologies"></div>
+            <div id="stack-detail" class="stack-detail" aria-live="polite" aria-atomic="true"><span class="stack-detail-label">Implementation / n8n</span><p>Twelve workflows coordinate discovery, qualification, contact research and outreach, with validated state changes and separate approval gates for sending.</p></div>
+            <div class="project-bottom"><div id="project-links" class="project-links"><a class="text-link" href="https://github.com/gautax/ai-job-outreach-platform" target="_blank" rel="noreferrer">Explore GitHub <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a><a class="demo-link" href="https://youtu.be/knn3NYxtOrQ" target="_blank" rel="noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-play" /></svg> Watch demo</a></div><span id="project-proof" class="project-proof">12 connected workflows</span></div>
+          </article>
+        </div>
+        <p class="project-status sr-only" role="status"></p>
+        <noscript><p>More projects: <a href="https://github.com/gautax/Weather-Forcasting-Using-ML">Weather Forecasting</a>, <a href="https://github.com/gautax/AI-Powered-Symptom-Checker">Symptom Checker</a>, <a href="https://github.com/gautax/medical-ai-app-with-agents">Medical Agents</a>, <a href="https://github.com/gautax/cloud-deployment-app">Prescription Reader</a>, <a href="https://github.com/gautax/Agentic_RAG">Agentic RAG</a>.</p></noscript>
+      </section>
+      <section id="expertise" class="expertise-section"><div class="container expertise-layout">
+        <div class="expertise-intro"><p class="eyebrow"><span>02</span> Expertise</p><h2>A practical toolkit.<br /><em>A systems mindset.</em></h2><p>Modeling is one part of the work. I connect data, retrieval, orchestration and delivery to make the whole system useful.</p><div class="expertise-note"><span class="note-dot"></span><span>Research to implementation.<br />Python at the core.</span></div></div>
+        <div class="skill-accordions">
+          <details open><summary><span><strong>AI, LLMs & retrieval</strong><small>Grounded answers. Connected knowledge.</small></span><svg class="icon" aria-hidden="true"><use href="#i-chevron" /></svg></summary><div class="skill-list"><span>RAG</span><span>Agentic AI</span><span>Gemini</span><span>Vertex AI</span><span>CrewAI</span><span>Hugging Face</span><span>Semantic Search</span><span>Knowledge Graphs</span><span>Text-to-Cypher</span><span>Neo4j</span><span>Qdrant</span><span>FAISS</span></div></details>
+          <details><summary><span><strong>Machine learning & forecasting</strong><small>Raw observations to evaluated predictions.</small></span><svg class="icon" aria-hidden="true"><use href="#i-chevron" /></svg></summary><div class="skill-list"><span>Scikit-learn</span><span>XGBoost</span><span>ARIMA / SARIMA</span><span>LSTM / GRU</span><span>CNN-LSTM / CNN-GRU</span><span>TCN</span><span>Feature Engineering</span><span>MAE / RMSE</span></div></details>
+          <details><summary><span><strong>Applications & automation</strong><small>Workflows with state, review and delivery.</small></span><svg class="icon" aria-hidden="true"><use href="#i-chevron" /></svg></summary><div class="skill-list"><span>Python</span><span>n8n</span><span>Streamlit</span><span>FastAPI</span><span>Flask</span><span>REST APIs</span><span>Authenticated Webhooks</span><span>Human-in-the-Loop</span><span>Idempotency</span><span>Deduplication</span><span>State Management</span><span>Structured LLM Outputs</span><span>API Rate Limits</span><span>Web Scraping</span><span>Gmail API</span><span>Google Sheets API</span><span>Brave Search API</span><span>Hunter API</span><span>OCR</span><span>DOCX Reports</span><span>HTML / CSS / JavaScript</span></div></details>
+          <details><summary><span><strong>Data, cloud & engineering</strong><small>The foundations behind the application.</small></span><svg class="icon" aria-hidden="true"><use href="#i-chevron" /></svg></summary><div class="skill-list"><span>SQL / MySQL</span><span>MongoDB</span><span>Firestore</span><span>Google Cloud</span><span>Cloud Run</span><span>Cloud Storage</span><span>Docker</span><span>Git</span><span>Power BI</span><span>Java</span><span>C</span></div></details>
+        </div>
+      </div></section>
+      <section id="about" class="section container about-section">
+        <div class="section-heading"><div><p class="eyebrow"><span>03</span> A little context</p><h2>Curious by nature.<br /><em>Engineer by practice.</em></h2></div></div>
+        <div class="about-layout">
+          <div class="about-profile"><div class="portrait-frame"><img class="about-portrait" src="assets/profile-pic.png" alt="Illustrated portrait of Yahya Menkari" width="1254" height="1254" loading="lazy" /></div><div class="profile-caption"><span>Yahya Menkari</span><span>Morocco</span></div><p>AI & Machine Learning Engineer with a background in Big Data, research experience in Bulgaria and Morocco, and a focus on building working systems.</p><div class="language-list"><span>Arabic <small>Native</small></span><span>French <small>Bilingual</small></span><span>English <small>B2+</small></span></div></div>
+          <div class="experience-list">
+            <article><div class="experience-date">Feb - Jun 2026 <span>Research</span></div><h3>Machine Learning Research Intern</h3><p class="institution">Technical University of Sofia, Bulgaria</p><p>Built a 24-hour forecasting pipeline from 43,000+ hourly observations. Engineered 43 features and benchmarked boosted trees and temporal neural networks.</p><a class="text-link" href="https://github.com/gautax/Weather-Forcasting-Using-ML" target="_blank" rel="noreferrer">Explore the research <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a></article>
+            <article><div class="experience-date">Jul - Sep 2024 <span>Research</span></div><h3>AI Research Intern</h3><p class="institution">Archipel Cognitive, Morocco</p><p>Researched RAG architectures for social-media retrieval, built an X/Twitter extraction workflow, and investigated CDC-based streaming retrieval and incremental vector updates.</p></article>
+            <article class="education-entry"><div><div class="experience-date">2021 - 2026 <span>Education</span></div><h3>M.Eng. Computer Science, Big Data & AI</h3><p class="institution">International University of Rabat, Morocco</p></div><p>Exchange in IT for Business Management<br />Technical University of Sofia, 2025 - 2026</p></article>
           </div>
         </div>
       </section>
-
-      <section id="expertise" class="section">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Expertise</p>
-          <h2>An AI profile connecting research, data engineering and deployment.</h2>
-        </div>
-        <div class="expertise-grid">
-          <article class="feature-card reveal">
-            <span>01</span>
-            <h3>Machine Learning & Forecasting</h3>
-            <p>
-              XGBoost, ARIMA, SARIMA, LSTM, GRU and TCN applied to weather forecasting,
-              with preprocessing pipelines, lag variables, rolling statistics and MAE/RMSE evaluation.
-            </p>
-          </article>
-          <article class="feature-card reveal">
-            <span>02</span>
-            <h3>LLM, RAG & Knowledge Systems</h3>
-            <p>
-              RAG system design with Gemini, CrewAI, Neo4j, Qdrant, FAISS and Elasticsearch
-              to improve retrieval quality, reasoning and response accuracy.
-            </p>
-          </article>
-          <article class="feature-card reveal">
-            <span>03</span>
-            <h3>Cloud, Data & Product Delivery</h3>
-            <p>
-              Python, Streamlit, Flask, Firestore, Docker, Google Cloud Run, MongoDB,
-              ETL pipelines and analytics workflows with Power BI.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="projects" class="section section-band">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Selected work</p>
-          <h2>Projects across healthcare AI, cloud deployment, RAG and forecasting.</h2>
-        </div>
-        <div class="projects-grid">
-          <article class="project-card featured-project reveal" data-project-card="weather">
-            <div>
-              <p class="project-type">Weather AI - Forecasting - End-to-end ML</p>
-              <h3>24-Hour Weather Forecasting System</h3>
-              <p>
-                An end-to-end forecasting project built from raw weather station data:
-                preprocessing, feature engineering, model comparison and 24-hour prediction
-                workflows using classical ML and deep learning approaches.
-              </p>
-            </div>
-            <div class="project-links">
-              <a href="https://medium.com/@yahya.menkari/from-raw-weather-station-data-to-24-hour-forecasts-building-an-end-to-end-ai-forecasting-system-c73472605fa1" target="_blank" rel="noreferrer">
-                Read article
-              </a>
-              <a href="https://github.com/gautax/Weather-Forcasting-Using-ML" target="_blank" rel="noreferrer">
-                View code
-              </a>
-            </div>
-          </article>
-          <article class="project-card reveal" data-project-card="agents">
-            <div>
-              <p class="project-type">AI Agents - Streamlit - Gemini</p>
-              <h3>Medical AI App with Agents</h3>
-              <p>
-                Conversational platform for diagnosis support, treatment recommendations,
-                specialist referrals and appointment coordination through CrewAI agents.
-              </p>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/gautax/medical-ai-app-with-agents" target="_blank" rel="noreferrer">View project</a>
-            </div>
-          </article>
-          <article class="project-card reveal" data-project-card="symptom">
-            <div>
-              <p class="project-type">Neo4j - Qdrant - PubMed - Gemini</p>
-              <h3>AI-Powered Symptom Checker</h3>
-              <p>
-                Medical assistant combining graph databases, vector search and generative AI
-                to produce contextual insights from natural-language symptoms.
-              </p>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/gautax/AI-Powered-Symptom-Checker" target="_blank" rel="noreferrer">View project</a>
-            </div>
-          </article>
-          <article class="project-card reveal" data-project-card="prescription">
-            <div>
-              <p class="project-type">Google Cloud Vision - Firestore - Docker</p>
-              <h3>Prescription Reader AI</h3>
-              <p>
-                OCR application for digitizing handwritten prescriptions, matching medication
-                names with Firestore and deploying the service on Google Cloud Run.
-              </p>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/gautax/cloud-deployment-app" target="_blank" rel="noreferrer">View project</a>
-            </div>
-          </article>
-          <article class="project-card reveal" data-project-card="rag">
-            <div>
-              <p class="project-type">RAG - Jupyter Notebook</p>
-              <h3>Agentic RAG</h3>
-              <p>
-                Exploration of agentic RAG pipelines focused on retrieval quality,
-                tool orchestration and knowledge-enhanced AI applications.
-              </p>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/gautax/Agentic_RAG" target="_blank" rel="noreferrer">View project</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="systems-map" class="section systems-map section-band">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Interactive systems map</p>
-          <h2>Explore how my projects connect skills, data and deployed AI products.</h2>
-        </div>
-        <div class="map-shell reveal" aria-label="Interactive graph of Yahya Menkari projects and skills">
-          <svg class="map-lines" viewBox="0 0 1000 620" aria-hidden="true">
-            <path data-link="rag-symptom" d="M500 280 C420 235 350 210 245 170" />
-            <path data-link="rag-rag" d="M500 400 C420 430 320 470 220 455" />
-            <path data-link="graph-symptom" d="M500 280 C575 210 675 155 790 145" />
-            <path data-link="vector-symptom" d="M500 280 C610 250 705 245 840 295" />
-            <path data-link="gemini-agents" d="M500 205 C400 135 325 92 190 94" />
-            <path data-link="gemini-symptom" d="M500 280 C410 205 305 150 190 94" />
-            <path data-link="crewai-agents" d="M500 205 C575 130 670 88 810 95" />
-            <path data-link="forecasting-weather" d="M500 120 C435 100 355 94 240 120" />
-            <path data-link="xgboost-weather" d="M500 120 C570 104 665 102 780 120" />
-            <path data-link="cloud-prescription" d="M500 500 C410 528 330 546 205 535" />
-            <path data-link="ocr-prescription" d="M500 500 C585 535 685 548 815 530" />
-            <path data-link="streamlit-agents" d="M500 205 C500 155 500 105 500 72" />
-            <path data-link="streamlit-prescription" d="M500 500 C500 435 500 355 500 205" />
-            <path data-link="flask-symptom" d="M500 280 C500 215 500 150 500 72" />
-            <path data-link="docker-prescription" d="M500 500 C585 440 665 390 820 385" />
-            <path data-link="python-weather" d="M500 120 C500 180 500 230 500 280" />
-            <path data-link="python-agents" d="M500 205 C500 230 500 250 500 280" />
-            <path data-link="python-prescription" d="M500 500 C500 425 500 350 500 280" />
-          </svg>
-
-          <button class="map-node project-node" style="--x: 50%; --y: 18%;" data-node="weather" data-type="project" type="button">
-            <span>Project</span>
-            <strong>Weather Forecasting</strong>
-          </button>
-          <button class="map-node project-node" style="--x: 50%; --y: 32%;" data-node="agents" data-type="project" type="button">
-            <span>Project</span>
-            <strong>Medical Agents</strong>
-          </button>
-          <button class="map-node project-node" style="--x: 50%; --y: 45%;" data-node="symptom" data-type="project" type="button">
-            <span>Project</span>
-            <strong>Symptom Checker</strong>
-          </button>
-          <button class="map-node project-node" style="--x: 50%; --y: 64%;" data-node="rag" data-type="project" type="button">
-            <span>Project</span>
-            <strong>Agentic RAG</strong>
-          </button>
-          <button class="map-node project-node" style="--x: 50%; --y: 80%;" data-node="prescription" data-type="project" type="button">
-            <span>Project</span>
-            <strong>Prescription Reader</strong>
-          </button>
-
-          <button class="map-node skill-node" style="--x: 24%; --y: 19%;" data-node="forecasting" type="button">
-            Forecasting
-          </button>
-          <button class="map-node skill-node" style="--x: 78%; --y: 19%;" data-node="xgboost" type="button">
-            XGBoost
-          </button>
-          <button class="map-node skill-node" style="--x: 14%; --y: 9%;" data-node="gemini" type="button">
-            Gemini
-          </button>
-          <button class="map-node skill-node" style="--x: 86%; --y: 9%;" data-node="crewai" type="button">
-            CrewAI
-          </button>
-          <button class="map-node skill-node" style="--x: 43%; --y: 9%;" data-node="streamlit" type="button">
-            Streamlit
-          </button>
-          <button class="map-node skill-node" style="--x: 57%; --y: 9%;" data-node="flask" type="button">
-            Flask
-          </button>
-          <button class="map-node skill-node" style="--x: 24%; --y: 27%;" data-node="rag-skill" type="button">
-            RAG
-          </button>
-          <button class="map-node skill-node" style="--x: 85%; --y: 31%;" data-node="graph" type="button">
-            Neo4j Graph
-          </button>
-          <button class="map-node skill-node" style="--x: 84%; --y: 47%;" data-node="vector" type="button">
-            Qdrant Vector Search
-          </button>
-          <button class="map-node skill-node" style="--x: 22%; --y: 73%;" data-node="cloud" type="button">
-            Google Cloud
-          </button>
-          <button class="map-node skill-node" style="--x: 82%; --y: 86%;" data-node="ocr" type="button">
-            OCR
-          </button>
-          <button class="map-node skill-node" style="--x: 82%; --y: 62%;" data-node="docker" type="button">
-            Docker
-          </button>
-          <button class="map-node core-node" style="--x: 31%; --y: 55%;" data-node="python" type="button">
-            Python Core
-          </button>
-
-          <aside class="map-insight" aria-live="polite">
-            <span class="map-insight-label">Start here</span>
-            <h3>Hover a skill or project</h3>
-            <p>
-              The graph will light up the systems where that capability appears, from
-              forecasting pipelines to medical RAG and cloud-deployed OCR.
-            </p>
-          </aside>
-        </div>
-      </section>
-
-      <section id="experience" class="section">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Journey</p>
-          <h2>International training and applied AI engineering experience.</h2>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <span>2021 - 2026</span>
-            <h3>M.Eng. Computer Science - Big Data & AI</h3>
-            <p>International University of Rabat, Morocco.</p>
-          </article>
-          <article class="timeline-item reveal">
-            <span>2025 - 2026</span>
-            <h3>Exchange Program - IT for Business Management</h3>
-            <p>Technical University of Sofia, Bulgaria.</p>
-          </article>
-          <article class="timeline-item reveal">
-            <span>AI Engineering</span>
-            <h3>Archipel Cognitive, Morocco</h3>
-            <p>
-              Research and implementation of RAG architectures, vector search and
-              production-oriented AI system design.
-            </p>
-          </article>
-          <article class="timeline-item reveal">
-            <span>Research</span>
-            <h3>Weather Forecasting with ML & DL</h3>
-            <p>
-              Compared XGBoost, ARIMA, SARIMA, LSTM, GRU and TCN models, evaluated with
-              MAE/RMSE, and researched modern architectures such as GenCast and WeatherNext.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="skills" class="section skills-showcase" aria-label="Technical skills">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Technical toolkit</p>
-          <h2>Skills I use to build AI systems from data to deployment.</h2>
-        </div>
-        <div class="skills-grid">
-          <article class="skill-group reveal">
-            <h3>AI, LLM & Retrieval</h3>
-            <div class="skill-tags">
-              <span>RAG</span>
-              <span>Agentic AI</span>
-              <span>Gemini</span>
-              <span>CrewAI</span>
-              <span>Hugging Face</span>
-              <span>Semantic Search</span>
-              <span>Knowledge Graphs</span>
-              <span>Text-to-Cypher</span>
-            </div>
-          </article>
-          <article class="skill-group reveal">
-            <h3>Machine Learning & Forecasting</h3>
-            <div class="skill-tags">
-              <span>Scikit-Learn</span>
-              <span>XGBoost</span>
-              <span>ARIMA</span>
-              <span>SARIMA</span>
-              <span>LSTM</span>
-              <span>GRU</span>
-              <span>TCN</span>
-              <span>MAE/RMSE</span>
-            </div>
-          </article>
-          <article class="skill-group reveal">
-            <h3>Data, Databases & Cloud</h3>
-            <div class="skill-tags">
-              <span>Python</span>
-              <span>SQL</span>
-              <span>Neo4j</span>
-              <span>Qdrant</span>
-              <span>FAISS</span>
-              <span>MongoDB</span>
-              <span>Firestore</span>
-              <span>Google Cloud</span>
-              <span>Docker</span>
-              <span>Power BI</span>
-            </div>
-          </article>
-          <article class="skill-group reveal">
-            <h3>Product Engineering</h3>
-            <div class="skill-tags">
-              <span>Streamlit</span>
-              <span>Flask</span>
-              <span>Java</span>
-              <span>C</span>
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>OCR</span>
-              <span>API Integration</span>
-              <span>DOCX Reports</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="contact section-band">
-        <div class="contact-inner reveal">
-          <p class="eyebrow">Contact</p>
-          <h2>Have an AI project, internship, research idea or job opportunity?</h2>
-          <p>
-            I am open to opportunities in AI Engineering, Machine Learning, RAG systems,
-            Big Data and Cloud AI.
-          </p>
-          <div class="contact-actions">
-            <a class="button primary" href="mailto:yahya.menkari.ai@gmail.com?subject=Professional%20opportunity%20-%20Yahya%20Menkari&body=Hello%20Yahya,%0D%0A%0D%0AI%20would%20like%20to%20contact%20you%20about...">
-              Send an opportunity
-            </a>
-            <a class="button secondary" href="https://www.linkedin.com/in/yahya-menkari" target="_blank" rel="noreferrer">
-              Connect on LinkedIn
-            </a>
-            <a class="button secondary" href="https://medium.com/@yahya.menkari" target="_blank" rel="noreferrer">
-              Read my Medium
-            </a>
-          </div>
-        </div>
-      </section>
+      <section id="contact" class="contact-section"><div class="container"><div class="contact-top"><p class="eyebrow"><span>04</span> What's next</p><span class="availability"><span></span> Open to AI & ML opportunities</span></div><h2>Let's build something<br /><em>worth putting to work.</em></h2><div class="contact-bottom"><a class="contact-email" href="mailto:yahya.menkari.ai@gmail.com">yahya.menkari.ai@gmail.com <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a><div class="contact-resumes"><a href="assets/YahyaMenkari-CV-2026-ATS.pdf" target="_blank" rel="noreferrer">ATS resume <svg class="icon" aria-hidden="true"><use href="#i-download" /></svg></a><a href="assets/YahyaMenkari-CV-2026.pdf" target="_blank" rel="noreferrer">Visual resume <svg class="icon" aria-hidden="true"><use href="#i-download" /></svg></a></div></div><div class="contact-upwork"><p>Have a freelance project in mind?</p><a class="button upwork-link" href="https://www.upwork.com/freelancers/~019dca64c63e7993a5?mp_source=share" target="_blank" rel="noreferrer">Hire me on Upwork <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a></div></div></section>
     </main>
-
-    <footer>
-      <p>2026 Yahya Menkari. Built for clarity, learning and useful AI.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <footer class="site-footer container"><span>&copy; 2026 Yahya Menkari</span><div><a href="https://github.com/gautax" target="_blank" rel="noreferrer">GitHub <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a><a href="https://www.linkedin.com/in/yahya-menkari" target="_blank" rel="noreferrer">LinkedIn <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a><a href="https://medium.com/@yahya.menkari" target="_blank" rel="noreferrer">Medium <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a><a href="https://www.upwork.com/freelancers/~019dca64c63e7993a5?mp_source=share" target="_blank" rel="noreferrer">Upwork <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a></div><a href="#home">Back to top <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a></footer>
+    <dialog id="preview-dialog" aria-labelledby="preview-title"><div class="dialog-header"><div><span id="dialog-kind" class="eyebrow">Repository screenshot</span><h2 id="preview-title">Company qualification workflow</h2></div><button class="icon-button close-dialog" type="button" aria-label="Close preview"><svg class="icon" aria-hidden="true"><use href="#i-close" /></svg></button></div><div id="dialog-preview" class="preview-content"></div><a id="preview-source" class="text-link" href="assets/outreach-company-qualification.png" target="_blank" rel="noreferrer">Open source <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a></dialog>
   </body>
 </html>
